@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MeuApp</string>
+    <string name="preference_file_key">com.lp4.PREFERENCE_FILE_KEY</string>
 </resources>

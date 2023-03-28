@@ -4,6 +4,7 @@ import androidx.activity.viewModels
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.lp4.character.view.NewCharacterActivity
 import com.lp4.home.view.HomeActivity
 import com.lp4.databinding.ActivityLoginBinding
 import com.lp4.login.presentation.LoginViewModel
@@ -23,6 +24,10 @@ open class LoginActivity : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener {
             irParaAHome()
+        }
+
+        binding.tvNovo.setOnClickListener(){
+            irParaCadastro()
         }
 
         configLoginButton()
@@ -53,6 +58,11 @@ open class LoginActivity : AppCompatActivity() {
 
     private fun irParaAHome() {
         val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun irParaCadastro() {
+        val intent = Intent(this, NewCharacterActivity::class.java)
         startActivity(intent)
     }
 
